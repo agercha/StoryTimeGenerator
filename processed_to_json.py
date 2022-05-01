@@ -22,7 +22,7 @@ for file_name in os.listdir("edited_scripts"):
                 if i < len(words)*0.25: prompt = "Start of "
                 elif i < len(words)*0.75: prompt = "Middle of "
                 else: prompt = "End of "
-                curr_line["prompt"] = prompt + file_name
+                curr_line["prompt"] = prompt + (file_name).strip(".txt")
                 curr_line["completion"] = current_string
                 total_chars = len(word)
                 current_string = word
